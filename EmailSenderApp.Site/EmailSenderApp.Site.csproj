@@ -4,8 +4,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="umbraco\Data\TEMP\DistCache\32d9a849cf3db926ac478c312f7fca97fab1f72a-lastsynced.txt" />
+  </ItemGroup>
 
   <ItemGroup>
+    <!--<PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.9" />-->
     <PackageReference Include="Umbraco.Cms" Version="10.1.0" />
   </ItemGroup>
 
@@ -21,7 +25,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="umbraco\Data\TEMP\FileUploads\" />
+    <Folder Include="umbraco\Data\TEMP\InMemoryAuto\" />
     <Folder Include="wwwroot" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\ExternalIndex\segments.gen" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\ExternalIndex\segments_6" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\ExternalIndex\write.lock" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\ExternalIndex\_0.cfe" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\ExternalIndex\_0.cfs" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\ExternalIndex\_0.si" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\InternalIndex\segments.gen" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\InternalIndex\segments_6" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\InternalIndex\write.lock" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\InternalIndex\_0.cfe" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\InternalIndex\_0.cfs" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\InternalIndex\_0.si" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\MembersIndex\segments.gen" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\MembersIndex\segments_8" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\MembersIndex\write.lock" />
+    <None Include="umbraco\Data\TEMP\MainDom_1118eaa0ae034ba16bba7a6ea703c714a5fc942a.lock" />
+    <None Include="umbraco\Data\TEMP\NuCache\NuCache.Content.db" />
+    <None Include="umbraco\Data\TEMP\NuCache\NuCache.Media.db" />
+    <None Include="umbraco\Data\Umbraco.sqlite.db" />
+    <None Include="umbraco\Data\Umbraco.sqlite.db-shm" />
+    <None Include="umbraco\Data\Umbraco.sqlite.db-wal" />
   </ItemGroup>
 
   <!-- Keep this as false if ModelsBuilder mode is InMemoryAuto -->

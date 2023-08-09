@@ -29,12 +29,14 @@ namespace EmailSenderApp.Site
         /// </remarks>
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddUmbraco(_env, _config)
                 .AddBackOffice()
                 .AddWebsite()
                 .AddComposers()
                 .Build();
-        }
+			
+		}
 
         /// <summary>
         /// Configures the application.
@@ -48,6 +50,7 @@ namespace EmailSenderApp.Site
                 app.UseDeveloperExceptionPage();
             }
 
+
             app.UseUmbraco()
                 .WithMiddleware(u =>
                 {
@@ -60,6 +63,8 @@ namespace EmailSenderApp.Site
                     u.UseBackOfficeEndpoints();
                     u.UseWebsiteEndpoints();
                 });
+
+
         }
     }
 }
