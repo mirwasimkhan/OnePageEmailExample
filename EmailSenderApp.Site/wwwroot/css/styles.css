@@ -348,6 +348,18 @@ button:focus:not(:focus-visible) {
   outline: 0;
 }
 
+.default-row-spacer {
+    margin-bottom: 10px;
+}
+
+.default-spacer {
+    margin-right: 10px;
+}
+
+.large-row-spacer {
+    margin-bottom: 20px;
+}
+
 input,
 button,
 select,

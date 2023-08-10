@@ -1,9 +1,11 @@
 using EmailSenderApp.Site;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
+using UmbracoWebApi.Models;
 
 namespace UmbracoWebApi.Controllers
 {
-	[ApiController]
+    [ApiController]
 	[Route("[controller]")]
 	public class HomePageApiController : ControllerBase
 	{	
@@ -17,10 +19,12 @@ namespace UmbracoWebApi.Controllers
 		}
 
 		[HttpPost]
-		public async Task<IActionResult> SendEmail(User user)
+		public async Task<IActionResult> SendEmail([FromBody] User user)
 		{
-			bool result = emailService.sendEmail(user.email, user.message, user.subject);
-			return Ok(result);
+			ResponseObject<bool> response = new ResponseObject<bool>();
+			response.response = emailService.sendEmail(user);			
+
+			return Ok(response);
 		}
 	}
 }

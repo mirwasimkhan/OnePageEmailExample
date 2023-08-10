@@ -15,10 +15,19 @@
 						<br />
 					<form action="javascript:void(0);" method="POST" onsubmit="sendEmail()">
 						<div class="form-group">
-							<label for="exampleInputEmail1">Email address</label>
-							<input type="email" class="form-control col-lg-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+							<label for="exampleInputEmail1">To</label>
+							<input type="email" class="form-control col-lg-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">							
 						</div>
+						<br />
+					<div class="form-group">
+						<label for="exampleInputEmailFrom">Enter Your Email</label>
+						<input type="email" class="form-control col-lg-2" id="exampleInputEmailFrom" aria-describedby="emailHelp" placeholder="Sent By">
+					</div>
+					<br />
+					<div class="form-group">
+						<label for="exampleInputFullName">Full Name</label>
+						<input type="text" class="form-control col-lg-2" id="exampleInputFullName" aria-describedby="emailHelp" placeholder="Enter Your Full Name">						
+					</div>
 						<br />
 					<div class="form-group">
 						<label for="exampleInputEmailSubject">Subject</label>
@@ -32,11 +41,11 @@
 					<br />
 					<button type="submit" class="btn btn-primary">Submit</button>
 					<br />
-					<div class="alert alert-secondary" role="alert" id="statusMessage" hidden="hidden">
+					<div class="alert alert-success default-spacer" role="alert" id="statusMessage" hidden="hidden" maring="auto">
 						Email Sent!
 					</div>
-					<div class="alert alert-danger" role="alert" id="emailFailed" hidden="hidden">
-						Email could not be sent!
+					<div class="alert alert-danger default-spacer" role="alert" id="emailFailed" hidden="hidden" maring="auto">
+						Email could not be sent! Check bot email configurations.
 					</div>
 					</form>
                     </div>
