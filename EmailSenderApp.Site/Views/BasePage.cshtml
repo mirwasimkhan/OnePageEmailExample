@@ -1,0 +1,45 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.BasePage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+
+<!-- About section-->
+        <section id="about">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h4>Hi! want to connect? Send an email right now.</h4>
+						<br />
+					<form action="javascript:void(0);" method="POST" onsubmit="sendEmail()">
+						<div class="form-group">
+							<label for="exampleInputEmail1">Email address</label>
+							<input type="email" class="form-control col-lg-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						</div>
+						<br />
+					<div class="form-group">
+						<label for="exampleInputEmailSubject">Subject</label>
+						<input type="text" class="form-control col-lg-2" id="exampleInputSubject" aria-describedby="emailHelp" placeholder="Enter Subject">						
+					</div>
+					<br />
+					<div class="form-group">
+						<label for="exampleInputEmailSubject">Message</label>
+						<textarea class="form-control" id="exampleFormControlTextarea" rows="3"></textarea>
+					</div>					
+					<br />
+					<button type="submit" class="btn btn-primary">Submit</button>
+					<br />
+					<div class="alert alert-secondary" role="alert" id="statusMessage" hidden="hidden">
+						Email Sent!
+					</div>
+					<div class="alert alert-danger" role="alert" id="emailFailed" hidden="hidden">
+						Email could not be sent!
+					</div>
+					</form>
+                    </div>
+                </div>
+            </div>
+        </section>
